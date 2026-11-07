@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connections | Social Media Feed</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-light">
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#home">Connections</a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarContent"
+                    aria-controls="navbarContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#feed">Feed</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#profile">Profile</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Application Content -->
+    <main class="container my-4">
+        <div class="row g-4">
+            <!-- Left Sidebar -->
+            <aside class="col-lg-3">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body text-center">
+                        <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto mb-3"
+                            style="width: 75px; height: 75px; font-size: 28px;">
+                            S
+                        </div>
+                        <h5 class="card-title">Welcome, User!</h5>
+                        <p class="text-muted small">Connect with your community.</p>
+
+                        <hr>
+
+                        <ul class="nav flex-column text-start">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="#home">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="#feed">Social Feed</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="#profile">My Profile</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Center Column: Create Post and Feed -->
+            <section class="col-lg-6" id="home">
+                <!-- Welcome Section -->
+                <div class="mb-4">
+                    <h2>Welcome to Connections!</h2>
+                    <p class="text-muted">
+                        Share your thoughts and connect with your community.
+                    </p>
+                </div>
+                <!-- Create Post Card -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Create a Post</h5>
+                        <form id="post-form">
+                            <div class="mb-3">
+                                <label for="post-content" class="form-label">
+                                    What's on your mind?
+                                </label>
+                                <textarea
+                                    class="form-control"
+                                    id="post-content"
+                                    rows="3"
+                                    placeholder="Share something with your community..."
+                                    required>
+                                </textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                Publish Post
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Social Media Feed -->
+                <section id="feed">
+                    <h4 class="mb-3">Recent Posts</h4>
+                    <div id="post-feed">
+
+                        <!-- Sample Post 1 -->
+                        <article class="card shadow-sm mb-3 post">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div>
+                                        <h6 class="mb-0">Jordan Smith</h6>
+                                        <small class="text-muted">Posted recently</small>
+                                    </div>
+                                </div>
+                                <p class="post-content">
+                                    Excited to share some updates about my latest project!
+                                </p>
+
+                                <hr>
+
+                                <div class="post-actions d-flex align-items-center gap-3">
+                                    <button type="button" class="btn btn-outline-primary btn-sm like-button">
+                                        Like
+                                    </button>
+                                    <span class="like-count text-muted small">0 Likes</span>
+                                </div>
+                                <div class="comments-section mt-3">
+                                    <!-- Comments will be added here -->
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Sample Post 2 -->
+                        <article class="card shadow-sm mb-3 post">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div>
+                                        <h6 class="mb-0">Alex Johnson</h6>
+                                        <small class="text-muted">Posted recently</small>
+                                    </div>
+                                </div>
+                                <p class="post-content">
+                                    Looking forward to connecting with everyone!
+                                </p>
+
+                                <hr>
+
+                                <div class="post-actions d-flex align-items-center gap-3">
+                                    <button type="button" class="btn btn-outline-primary btn-sm like-button">
+                                        Like
+                                    </button>
+                                    <span class="like-count text-muted small">0 Likes</span>
+                                </div>
+                                <div class="comments-section mt-3">
+                                    <!-- Comments will be added here -->
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Right Sidebar -->
+            <aside class="col-lg-3">
+                <!-- Suggested Users -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Suggested Users</h5>
+                        <div class="mb-3">
+                            <h6 class="mb-1">Morgan Lee</h6>
+                            <small class="text-muted">Student</small>
+                        </div>
+                        <div class="mb-3">
+                            <h6 class="mb-1">Taylor Brown</h6>
+                            <small class="text-muted">Graphic Designer</small>
+                        </div>
+                        <div>
+                            <h6 class="mb-1">Casey Wilson</h6>
+                            <small class="text-muted">Software Developer</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trending Topics -->
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Trending Topics</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2">#Technology</li>
+                            <li class="mb-2">#CollegeLife</li>
+                            <li class="mb-2">#Programming</li>
+                            <li>#Creativity</li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p class="mb-0">&copy; 2026 Connections. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
