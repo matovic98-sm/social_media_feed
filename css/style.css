@@ -1,0 +1,117 @@
+/* Shared palette for the page and controls. */
+:root {
+	--color-purple: #7400B8;
+	--color-violet: #6930C3;
+	--color-indigo: #5E60CE;
+	--color-blue: #5390D9;
+	--color-sky: #4EA8DE;
+	--color-ink: #25243A;
+	--color-surface: #FFFFFF;
+	--color-page: rgba(83, 144, 217, 0.12);
+}
+
+/* Keep element sizing predictable. */
+* {
+	box-sizing: border-box;
+}
+
+/* Set the page's base spacing, colors, and typography. */
+body {
+	margin: 0;
+	background-color: var(--color-page);
+	color: var(--color-ink);
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Override Bootstrap's light background utility with the theme surface. */
+body.bg-light {
+	background-color: var(--color-page) !important;
+}
+
+/* Apply the gradient header and its foreground color. */
+header {
+	color: var(--color-surface);
+	background: linear-gradient(110deg, var(--color-purple), var(--color-indigo) 55%, var(--color-blue));
+}
+
+/* Let the header gradient show through the Bootstrap navbar. */
+header .navbar.bg-primary {
+	background: transparent !important;
+}
+
+/* Match the profile avatar to the primary button color. */
+.rounded-circle.bg-primary {
+	background-color: var(--color-violet) !important;
+}
+
+/* Give primary actions a consistent filled appearance. */
+button,
+input[type="button"],
+input[type="submit"],
+.button,
+.btn-primary {
+	border: 0;
+	border-radius: 0.5rem;
+	padding: 0.65rem 1rem;
+	background-color: var(--color-violet);
+	color: var(--color-surface);
+	font: inherit;
+	cursor: pointer;
+	transition: background-color 160ms ease, transform 160ms ease;
+}
+
+/* Keep outline buttons transparent with a violet border. */
+.btn-outline-primary {
+	border: 1px solid var(--color-violet);
+	background-color: transparent;
+	color: var(--color-violet);
+	transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+/* Add the theme hover fill and lift to interactive controls. */
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+.button:hover,
+.btn-primary:hover,
+/* Complete the outline-button hover state with readable contrast. */
+.btn-outline-primary:hover {
+	background-color: var(--color-purple);
+	transform: translateY(-1px);
+}
+
+.btn-outline-primary:hover {
+	border-color: var(--color-purple);
+	color: var(--color-surface);
+}
+
+/* Make keyboard focus visible on buttons and links. */
+button:focus-visible,
+input[type="button"]:focus-visible,
+input[type="submit"]:focus-visible,
+.button:focus-visible,
+a:focus-visible {
+	outline: 3px solid var(--color-sky);
+	outline-offset: 3px;
+}
+
+/* Set the default link color. */
+a {
+	color: var(--color-indigo);
+}
+
+/* Emphasize links on hover. */
+a:hover {
+	color: var(--color-purple);
+}
+
+/* Respect reduced-motion preferences. */
+@media (prefers-reduced-motion: reduce) {
+	/* Disable smooth scrolling and minimize transitions. */
+	*,
+	*::before,
+	*::after {
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
+	}
+}
